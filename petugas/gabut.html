@@ -1,0 +1,35 @@
+<!-- Modal Edit Data -->
+<div class="modal fade" id="edit-data<?php echo $d['PelangganID']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: black">
+      <div class="modal-header" style="background-color: black">
+        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #ffff">Edit Pembelian</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="proses_update_pembelian.php" method="post">
+        <div class="modal-body" style="background-color: black">
+          <div class="col-6">
+            <input type="text" name="PelangganID" value="<?php echo $d['PelangganID']; ?>" class="from-control" hidden>
+          </div>
+          <div class="col-6">
+            <label style="color: #ffff">Nama Pelanggan</label>
+            <input type="text" name="NamaPelanggan" value="<?php echo $d['NamaPelanggan']; ?>" class="from-control">
+          </div>
+          <div class="col-6">
+            <label style="color: #ffff">Alamat</label>
+            <input type="text" name="Alamat" value="<?php echo $d['Alamat']; ?>" class="from-control">
+          </div>
+          <div class="col-6">
+            <label style="color: #ffff">No Telepon</label>
+            <input type="text" name="NoTelepon" value="<?php echo $d['NoTelepon']; ?>" class="from-control">
+          </div>
+          <div class="modal-footer" style="background-color: black">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-outline-success">Simpan</button>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

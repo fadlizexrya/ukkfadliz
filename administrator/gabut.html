@@ -1,0 +1,103 @@
+!-- Modal Tambah Data -->
+<div class="modal fade" id="tambah-data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: black">
+        <h1 class="modal-title fs-5" style="color: #ffff" id="exampleModalLabel">Tambah Pelanggan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="proses_pembelian.php" method="post">
+        <div class="modal-body" style="background-color: black">
+            <div class="col-10">
+                <label style="color: #ffff">ID Pelanggan</label>
+                <input type="text" name="PelangganID"  class="form-control" value="<?php echo date("dmHis") ?>">
+            </div>
+            <div class="col-10">
+                <label style="color: #ffff">Nama Pelanggan</label>
+                <input type="text" name="NamaPelanggan" class="form-control">
+            </div>
+			<div class="col-10">
+                <label style="color: #ffff">No Telepon</label>
+                <input type="text" name="NoTelepon" class="form-control">
+            </div>
+            <div class="col-10">
+                <label style="color: #ffff">Alamat</label>
+                <input type="text" name="Alamat" class="form-control">
+				<input type="hidden" name="TanggalPenjualan" value="<?php echo date("Y-m-d") ?>" class="form-control">
+            </div>
+			</div>
+            <div class="modal-footer" style="background-color: black">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-success">Simpan</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Data-->
+<div class="modal fade" id="edit-data<?php echo $d['ProdukID']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header" style="background-color: black">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #ffff">Edit Barang</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="proses_update_barang.php" method="post">
+              <div class="modal-body" style="background-color: black">
+              <div class="col-6">
+                  <label style="color: #ffff">Nama Barang</label>
+                  <input type="hidden" name="ProdukID" value="<?php echo $d['ProdukID']; ?>">
+                  <input type="text" name="NamaProduk" class="from-control" value="<?php echo $d['NamaProduk']; ?>">
+              </div>
+              <div class="col-6">
+                  <label style="color: #ffff">Harga Barang</label>
+                  <input type="number" name="Harga" class="from-control" value="<?php echo $d['Harga']; ?>">
+              </div>
+              <div class="col-6">
+                  <label style="color: #ffff">Stok Barang</label>
+                  <input type="number" name="Stok" class="from-control" value="<?php echo $d['Stok']; ?>">
+              </div>
+              </div>
+              <div class="modal-footer" style="background-color: black">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                  <button type="submit" class="btn btn-outline-success">Simpan</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Tambah Data -->
+<div class="modal fade" id="tambah-data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: black">
+        <h1 class="modal-title fs-5" style="color: #ffff" id="exampleModalLabel">Tambah Barang</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="proses_simpan_barang.php" method="post">
+        <div class="modal-body" style="background-color: black">
+            <div class="col-6">
+                <label style="color: #ffff">Nama Barang</label>
+                <input type="text" name="NamaProduk" class="from-control">
+            </div>
+            <div class="col-6">
+                <label style="color: #ffff">Harga Barang</label>
+                <input type="number" name="Harga" class="from-control">
+            </div>
+            <div class="col-6">
+                <label style="color: #ffff">Stok Barang</label>
+                <input type="number" name="Stok" class="from-control">
+            </div>
+            </div>
+            <div class="modal-footer" style="background-color: black">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-success">Simpan</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
