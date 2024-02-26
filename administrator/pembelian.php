@@ -152,7 +152,7 @@ include "navbar.php";
                               </div>
                               <div class="col-10">
                                     <label style="color: #ffff">No. Telepon</label>
-                                    <input type="number" name="NoTelepon" class="form-control">
+                                    <input type="text" name="NoTelepon" class="form-control">
                               </div>
                         </div>
                         <div class="modal-footer" style="background-color: black">
