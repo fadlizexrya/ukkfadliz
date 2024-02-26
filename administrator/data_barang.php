@@ -78,7 +78,7 @@ include "navbar.php";
                                         </div>
                                         <div class="col-10">
                                             <label style="color: #ffff">Harga</label>
-                                            <input type="number" name="Harga" class="form-control"value="<?php echo $d['Harga']; ?>">
+                                            <input type="text" name="Harga" class="form-control"value="<?php echo $d['Harga']; ?>">
                                         </div>
                                         <div class="col-10">
                                             <label style="color: #ffff">Stok</label>
@@ -137,7 +137,7 @@ include "navbar.php";
                 </div>
                 <div class="col-10">
                     <label style="color: #ffff">Harga</label>
-                    <input type="number" name="Harga" class="form-control">
+                    <input type="text" name="Harga" class="form-control">
                 </div>
                 <div class="col-10">
                     <label style="color: #ffff">Stok</label>
